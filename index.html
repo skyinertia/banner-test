@@ -3,46 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rainbow Text</title>
+  <title>Rainbow Text with Cool Background</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@600&display=swap');
+
     body {
       margin: 0;
-      background-color: black;
+      background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+      background-size: 400% 400%;
+      animation: backgroundMove 10s ease infinite; /* Cool background animation */
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column; /* Stack elements vertically */
+      flex-direction: column;
       height: 100vh;
       overflow: hidden;
-      text-align: center; /* Center align text for all elements */
+      text-align: center;
     }
 
     h1, h3, h4 {
-      font-family: Arial, sans-serif;
       font-weight: bold;
-      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
       background-size: 400% 100%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: rainbow 3s linear infinite;
-      margin: 0.5em 0; /* Add spacing between stacked elements */
+      margin: 0.3em 0;
     }
 
     h1 {
-      font-size: 10vw; /* Responsive size */
+      font-size: 8vw;
+      font-family: 'Lobster', cursive;
+      text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
     }
 
     h3 {
-      font-size: 5vw; /* Slightly smaller */
+      font-size: 4.5vw;
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
     }
 
     h4 {
-      font-size: 4vw; /* Smaller still */
+      font-size: 3.5vw;
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
     }
 
     @keyframes rainbow {
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
+    }
+
+    @keyframes backgroundMove {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
     }
   </style>
 </head>
