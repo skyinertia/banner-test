@@ -11,42 +11,33 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column; /* Stack elements vertically */
       height: 100vh;
       overflow: hidden;
+      text-align: center; /* Center align text for all elements */
+    }
+
+    h1, h3, h4 {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 400% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 3s linear infinite;
+      margin: 0.5em 0; /* Add spacing between stacked elements */
     }
 
     h1 {
-      font-size: 10vw; /* Adjust the size as needed */
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
-      background-size: 400% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: rainbow 3s linear infinite;
-      text-align: center;
+      font-size: 10vw; /* Responsive size */
     }
-        h3 {
-      font-size: 5vw; /* Adjust the size as needed */
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
-      background-size: 400% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: rainbow 3s linear infinite;
-      text-align: center;
+
+    h3 {
+      font-size: 5vw; /* Slightly smaller */
     }
-        h4 {
-      font-size: 4vw; /* Adjust the size as needed */
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
-      background-size: 400% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: rainbow 3s linear infinite;
-      text-align: center;
+
+    h4 {
+      font-size: 4vw; /* Smaller still */
     }
 
     @keyframes rainbow {
